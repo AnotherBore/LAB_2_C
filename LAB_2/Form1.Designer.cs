@@ -46,7 +46,7 @@ namespace LAB_2
             // 
             // textB
             // 
-            this.textB.Location = new System.Drawing.Point(12, 56);
+            this.textB.Location = new System.Drawing.Point(12, 59);
             this.textB.Name = "textB";
             this.textB.Size = new System.Drawing.Size(100, 23);
             this.textB.TabIndex = 1;
@@ -55,7 +55,7 @@ namespace LAB_2
             // 
             this.MainButton.Location = new System.Drawing.Point(12, 105);
             this.MainButton.Name = "MainButton";
-            this.MainButton.Size = new System.Drawing.Size(296, 44);
+            this.MainButton.Size = new System.Drawing.Size(299, 44);
             this.MainButton.TabIndex = 2;
             this.MainButton.Text = "Режем на квадраты";
             this.MainButton.UseVisualStyleBackColor = true;
@@ -72,7 +72,7 @@ namespace LAB_2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(120, 59);
+            this.label2.Location = new System.Drawing.Point(122, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(189, 15);
             this.label2.TabIndex = 4;
@@ -80,9 +80,9 @@ namespace LAB_2
             // 
             // TaskButton
             // 
-            this.TaskButton.Location = new System.Drawing.Point(353, 16);
+            this.TaskButton.Location = new System.Drawing.Point(328, 13);
             this.TaskButton.Name = "TaskButton";
-            this.TaskButton.Size = new System.Drawing.Size(99, 133);
+            this.TaskButton.Size = new System.Drawing.Size(124, 136);
             this.TaskButton.TabIndex = 5;
             this.TaskButton.Text = "Задание";
             this.TaskButton.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@ namespace LAB_2
             this.MaximumSize = new System.Drawing.Size(480, 200);
             this.MinimumSize = new System.Drawing.Size(480, 200);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Квадраторезка";
             this.ResumeLayout(false);
             this.PerformLayout();
 
