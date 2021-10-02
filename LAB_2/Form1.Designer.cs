@@ -62,6 +62,7 @@ namespace LAB_2
             this.MainButton.TabIndex = 2;
             this.MainButton.Text = "Режем на квадраты";
             this.MainButton.UseVisualStyleBackColor = true;
+            this.MainButton.Click += new System.EventHandler(this.MainButton_Click);
             // 
             // label1
             // 
