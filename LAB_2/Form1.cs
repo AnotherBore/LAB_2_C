@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LAB_2
 {
-    public partial class MainForm : Form
+    public partial class Task1 : Form
     {
-        public MainForm()
+        public Task1()
         {
             InitializeComponent();
         }
@@ -51,18 +51,27 @@ MessageBoxIcon.Question);
                 MessageBox.Show("Некорректный ввод", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            UInt16 count = Logic.CuttingSquares(sideA, sideB);
+            UInt16 count = LogicTask1.CuttingSquares(sideA, sideB);
             if (count > 1)
             {
-                MessageBox.Show($"{Logic.squares}\nКоличество квадратов - {count}", "Прямоугольник обработан");
+                MessageBox.Show($"{LogicTask1.squares}\nКоличество квадратов - {count}", "Прямоугольник обработан");
             }
             else
             {
                 MessageBox.Show("Это квадрат", "Прямоугольник обработан");
             }
         }
+
+        private void Just_Key_Up(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                SelectNextControl(ActiveControl, true, true, true, true);
+            }
+        }
     }
-    public class Logic
+    public class LogicTask1
     {
         public static string squares = "";
         public static UInt16 CuttingSquares(UInt16 a, UInt16 b)

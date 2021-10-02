@@ -1,7 +1,7 @@
 ﻿
 namespace LAB_2
 {
-    partial class MainForm
+    partial class Task1
     {
         /// <summary>
         ///  Required designer variable.
@@ -44,6 +44,7 @@ namespace LAB_2
             this.textA.Name = "textA";
             this.textA.Size = new System.Drawing.Size(127, 29);
             this.textA.TabIndex = 0;
+            this.textA.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Just_Key_Up);
             // 
             // textB
             // 
@@ -52,6 +53,7 @@ namespace LAB_2
             this.textB.Name = "textB";
             this.textB.Size = new System.Drawing.Size(127, 29);
             this.textB.TabIndex = 1;
+            this.textB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Just_Key_Up);
             // 
             // MainButton
             // 
@@ -95,7 +97,7 @@ namespace LAB_2
             this.TaskButton.UseVisualStyleBackColor = true;
             this.TaskButton.Click += new System.EventHandler(this.TaskButton_Click);
             // 
-            // MainForm
+            // Task1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,7 +114,7 @@ namespace LAB_2
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(550, 200);
             this.MinimumSize = new System.Drawing.Size(550, 200);
-            this.Name = "MainForm";
+            this.Name = "Task1";
             this.Text = "Квадраторезка";
             this.ResumeLayout(false);
             this.PerformLayout();
