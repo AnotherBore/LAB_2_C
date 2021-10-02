@@ -40,7 +40,7 @@ namespace LAB_2
             // textA
             // 
             this.textA.Location = new System.Drawing.Point(17, 18);
-            this.textA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textA.Margin = new System.Windows.Forms.Padding(4);
             this.textA.Name = "textA";
             this.textA.Size = new System.Drawing.Size(127, 29);
             this.textA.TabIndex = 0;
@@ -48,7 +48,7 @@ namespace LAB_2
             // textB
             // 
             this.textB.Location = new System.Drawing.Point(17, 58);
-            this.textB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textB.Margin = new System.Windows.Forms.Padding(4);
             this.textB.Name = "textB";
             this.textB.Size = new System.Drawing.Size(127, 29);
             this.textB.TabIndex = 1;
@@ -56,7 +56,7 @@ namespace LAB_2
             // MainButton
             // 
             this.MainButton.Location = new System.Drawing.Point(17, 105);
-            this.MainButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MainButton.Margin = new System.Windows.Forms.Padding(4);
             this.MainButton.Name = "MainButton";
             this.MainButton.Size = new System.Drawing.Size(384, 43);
             this.MainButton.TabIndex = 2;
@@ -87,7 +87,7 @@ namespace LAB_2
             // TaskButton
             // 
             this.TaskButton.Location = new System.Drawing.Point(409, 18);
-            this.TaskButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TaskButton.Margin = new System.Windows.Forms.Padding(4);
             this.TaskButton.Name = "TaskButton";
             this.TaskButton.Size = new System.Drawing.Size(112, 130);
             this.TaskButton.TabIndex = 5;
@@ -107,10 +107,11 @@ namespace LAB_2
             this.Controls.Add(this.textB);
             this.Controls.Add(this.textA);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1000, 1000);
-            this.MinimumSize = new System.Drawing.Size(480, 200);
+            this.MaximumSize = new System.Drawing.Size(550, 200);
+            this.MinimumSize = new System.Drawing.Size(550, 200);
             this.Name = "MainForm";
             this.Text = "Квадраторезка";
             this.ResumeLayout(false);

@@ -25,7 +25,7 @@ namespace LAB_2
 На какие квадраты и в каком их количестве будет разрезан исходный прямоугольник?",
 "Вариант 16",
 MessageBoxButtons.OK,
-MessageBoxIcon.Information);
+MessageBoxIcon.Question);
         }
 
         private void MainButton_Click(object sender, EventArgs e)
@@ -46,8 +46,20 @@ MessageBoxIcon.Information);
                 MessageBox.Show("Слишком большое число", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (sideA == 0 || sideB == 0)
+            {
+                MessageBox.Show("Некорректный ввод", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             UInt16 count = Logic.CuttingSquares(sideA, sideB);
-            MessageBox.Show($"{Logic.squares}\nКоличество квадратов - {count}", "Прямоугольник обработан");
+            if (count > 1)
+            {
+                MessageBox.Show($"{Logic.squares}\nКоличество квадратов - {count}", "Прямоугольник обработан");
+            }
+            else
+            {
+                MessageBox.Show("Это квадрат", "Прямоугольник обработан");
+            }
         }
     }
     public class Logic
