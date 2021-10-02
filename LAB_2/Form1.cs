@@ -30,7 +30,54 @@ MessageBoxIcon.Information);
 
         private void MainButton_Click(object sender, EventArgs e)
         {
+            UInt16 sideA, sideB;
+            try
+            {
+                sideA = UInt16.Parse(this.textA.Text);
+                sideB = UInt16.Parse(this.textB.Text);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Некорректный ввод", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            catch (OverflowException)
+            {
+                MessageBox.Show("Слишком большое число", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            UInt16 count = Logic.CuttingSquares(sideA, sideB);
+            MessageBox.Show($"{Logic.squares}\nКоличество квадратов - {count}", "Прямоугольник обработан");
+        }
+    }
+    public class Logic
+    {
+        public static string squares = "";
+        public static UInt16 CuttingSquares(UInt16 a, UInt16 b)
+        {
+            squares = "";
+            UInt16 count = 1;
+            if (a == b)
+            {
+                return count;
+            }
+            while (a != b)
+            {
+                if (a < b)
+                {
+                    b -= a;
+                    squares = squares + $"{count}. {a} x {a}" + "\n";
+                }
+                else
+                {
+                    a -= b;
+                    squares = squares + $"{count}. {b} x {b}" + "\n";
+                }
 
+                count++;
+            }
+            squares = squares + $"{count}. {a} x {a}" + "\n";
+            return count;
         }
     }
 }
