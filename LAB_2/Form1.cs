@@ -17,5 +17,9 @@ namespace LAB_2
             InitializeComponent();
         }
 
+        private void TaskButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
