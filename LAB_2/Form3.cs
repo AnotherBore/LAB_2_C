@@ -15,6 +15,7 @@ namespace LAB_2
         public Task2()
         {
             InitializeComponent();
+            textInput.Text = Properties.Settings.Default.input;
         }
 
         private void TaskButton2_Click(object sender, EventArgs e)
@@ -36,6 +37,8 @@ MessageBoxIcon.Question);
             }
             TaskLabel.Text = dol;
 
+            Properties.Settings.Default.input = input;
+            Properties.Settings.Default.Save();
         }
         public class LogicTask2
         {

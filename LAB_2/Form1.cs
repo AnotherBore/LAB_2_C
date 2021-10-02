@@ -15,6 +15,8 @@ namespace LAB_2
         public Task1()
         {
             InitializeComponent();
+            textA.Text = Properties.Settings.Default.sideA;
+            textB.Text = Properties.Settings.Default.sideB;
         }
 
         private void TaskButton_Click(object sender, EventArgs e)
@@ -46,11 +48,17 @@ MessageBoxIcon.Question);
                 MessageBox.Show("Слишком большое число", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            
             if (sideA == 0 || sideB == 0)
             {
                 MessageBox.Show("Некорректный ввод", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            Properties.Settings.Default.sideA = this.textA.Text;
+            Properties.Settings.Default.sideB = this.textB.Text;
+            Properties.Settings.Default.Save();
+
             UInt16 count = LogicTask1.CuttingSquares(sideA, sideB);
             if (count > 1)
             {
