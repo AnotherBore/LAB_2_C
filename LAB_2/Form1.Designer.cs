@@ -42,18 +42,20 @@ namespace LAB_2
             this.textA.Location = new System.Drawing.Point(17, 18);
             this.textA.Margin = new System.Windows.Forms.Padding(4);
             this.textA.Name = "textA";
-            this.textA.Size = new System.Drawing.Size(127, 29);
+            this.textA.Size = new System.Drawing.Size(127, 47);
             this.textA.TabIndex = 0;
             this.textA.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Just_Key_Up);
+            this.textA.Text = Properties.Settings.Default.sideA;
             // 
             // textB
             // 
             this.textB.Location = new System.Drawing.Point(17, 58);
             this.textB.Margin = new System.Windows.Forms.Padding(4);
             this.textB.Name = "textB";
-            this.textB.Size = new System.Drawing.Size(127, 29);
+            this.textB.Size = new System.Drawing.Size(127, 47);
             this.textB.TabIndex = 1;
             this.textB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Just_Key_Up);
+            this.textB.Text = Properties.Settings.Default.sideB;
             // 
             // MainButton
             // 
@@ -72,7 +74,7 @@ namespace LAB_2
             this.label1.Location = new System.Drawing.Point(154, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 21);
+            this.label1.Size = new System.Drawing.Size(475, 41);
             this.label1.TabIndex = 3;
             this.label1.Text = "Первая сторона прямоугольника";
             // 
@@ -82,7 +84,7 @@ namespace LAB_2
             this.label2.Location = new System.Drawing.Point(156, 58);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 21);
+            this.label2.Size = new System.Drawing.Size(469, 41);
             this.label2.TabIndex = 4;
             this.label2.Text = "Вторая сторона прямоугольника";
             // 
@@ -99,9 +101,8 @@ namespace LAB_2
             // 
             // Task1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 161);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(526, 134);
             this.Controls.Add(this.TaskButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

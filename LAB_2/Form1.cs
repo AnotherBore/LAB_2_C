@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LAB_2
@@ -14,12 +7,10 @@ namespace LAB_2
     {
         public Task1()
         {
-            InitializeComponent();
-            textA.Text = Properties.Settings.Default.sideA;
-            textB.Text = Properties.Settings.Default.sideB;
+            InitializeComponent();           
         }
 
-        private void TaskButton_Click(object sender, EventArgs e)
+        private void TaskButton_Click(object sender, EventArgs e)//выводим задание при нажатии кнопки
         {
             MessageBox.Show(@"Дан прямоугольник с размерами a x b.
 От него отрезают квадраты максимального размера, пока это возможно.
@@ -30,9 +21,10 @@ MessageBoxButtons.OK,
 MessageBoxIcon.Question);
         }
 
-        private void MainButton_Click(object sender, EventArgs e)
+        private void MainButton_Click(object sender, EventArgs e)//при нажатии кнопки
         {
-            UInt16 sideA, sideB;
+            UInt16 sideA, sideB;//под две стороны прямоугольника
+            //пробуем конвертировать строку в текстбоксах в число
             try
             {
                 sideA = UInt16.Parse(this.textA.Text);
@@ -48,18 +40,19 @@ MessageBoxIcon.Question);
                 MessageBox.Show("Слишком большое число", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+            //проверяем стороны на корректность
             if (sideA == 0 || sideB == 0)
             {
                 MessageBox.Show("Некорректный ввод", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+            //сохраняем введенные данные
             Properties.Settings.Default.sideA = this.textA.Text;
             Properties.Settings.Default.sideB = this.textB.Text;
             Properties.Settings.Default.Save();
 
-            UInt16 count = LogicTask1.CuttingSquares(sideA, sideB);
+            UInt16 count = LogicTask1.CuttingSquares(sideA, sideB);// сохраняем количество квадратов
+            //выводим меседжбоксс результатами
             if (count > 1)
             {
                 MessageBox.Show($"{LogicTask1.squares}\nКоличество квадратов - {count}", "Прямоугольник обработан");
@@ -81,21 +74,21 @@ MessageBoxIcon.Question);
     }
     public class LogicTask1
     {
-        public static string squares = "";
+        public static string squares = "";//заводим переменную под историю разрезов
         public static UInt16 CuttingSquares(UInt16 a, UInt16 b)
         {
             squares = "";
-            UInt16 count = 1;
-            if (a == b)
+            UInt16 count = 1; // для подсчета количества отсечений
+            if (a == b) //если уже квадрат
             {
                 return count;
             }
-            while (a != b)
+            while (a != b) // пока не разрезалось в последний раз
             {
-                if (a < b)
+                if (a < b) //проверяем какая сторона больше
                 {
-                    b -= a;
-                    squares = squares + $"{count}. {a} x {a}" + "\n";
+                    b -= a; //отсекаем по большей стороне
+                    squares = squares + $"{count}. {a} x {a}" + "\n";//в строку вписываем кавадрат и переносим строку
                 }
                 else
                 {
@@ -105,8 +98,8 @@ MessageBoxIcon.Question);
 
                 count++;
             }
-            squares = squares + $"{count}. {a} x {a}" + "\n";
-            return count;
+            squares = squares + $"{count}. {a} x {a}" + "\n"; //выводим последний квадрат
+            return count; //возвращаем количество отрезаний
         }
     }
 }

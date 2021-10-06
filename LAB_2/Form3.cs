@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LAB_2
@@ -15,10 +8,9 @@ namespace LAB_2
         public Task2()
         {
             InitializeComponent();
-            textInput.Text = Properties.Settings.Default.input;
         }
 
-        private void TaskButton2_Click(object sender, EventArgs e)
+        private void TaskButton2_Click(object sender, EventArgs e)//выводим задание по нажатию кнопки
         {
             MessageBox.Show(@"Дано предложение.
 Определить долю (в %) букв в нем.",
@@ -27,32 +19,32 @@ MessageBoxButtons.OK,
 MessageBoxIcon.Question);
         }
 
-        private void Just_Text_Changed(object sender, EventArgs e)
+        private void Just_Text_Changed(object sender, EventArgs e)//если меняется значение в техтбоксе
         {
             string input = this.textInput.Text;
             string dol = " ";
-            if (input.Length > 0)
+            if (input.Length > 0)//если что-то введено
             {
                dol = Convert.ToString(LogicTask2.ProportionOfLetters(input));
             }
-            TaskLabel.Text = dol;
+            TaskLabel.Text = dol;//выводим значение в лейбл
 
-            Properties.Settings.Default.input = input;
+            Properties.Settings.Default.input = input;//сохраняем значение в параметры
             Properties.Settings.Default.Save();
         }
         public class LogicTask2
         {
             public static int ProportionOfLetters(string str)
             {
-                UInt16 q = 0;
-                UInt16 dol = 0;
+                UInt16 q = 0;//под подсчет количества букв
+                UInt16 dol = 0;//для вычисления процентов
                 for (int i = 0; i < str.Length; i++)
                 {
-                    if (char.IsLetter(str[i]))
+                    if (char.IsLetter(str[i]))//определяем является ли буквой
                         q++;
                 }
-                dol = Convert.ToUInt16(q * 100 / str.Length);
-                return dol;
+                dol = Convert.ToUInt16(q * 100 / str.Length);//считаем проценты
+                return dol;//возвращаем проценты
             }
         }
     }

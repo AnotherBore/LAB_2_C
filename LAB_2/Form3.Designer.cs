@@ -42,6 +42,7 @@ namespace LAB_2
             this.textInput.Size = new System.Drawing.Size(365, 29);
             this.textInput.TabIndex = 0;
             this.textInput.TextChanged += new System.EventHandler(this.Just_Text_Changed);
+            this.textInput.Text = Properties.Settings.Default.input;
             // 
             // TaskButton2
             // 

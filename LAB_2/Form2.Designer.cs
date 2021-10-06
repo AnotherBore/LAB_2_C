@@ -35,7 +35,7 @@ namespace LAB_2
             // 
             // Task1Button
             // 
-            this.Task1Button.Location = new System.Drawing.Point(13, 17);
+            this.Task1Button.Location = new System.Drawing.Point(13, 13);
             this.Task1Button.Margin = new System.Windows.Forms.Padding(4);
             this.Task1Button.Name = "Task1Button";
             this.Task1Button.Size = new System.Drawing.Size(236, 115);
@@ -46,7 +46,7 @@ namespace LAB_2
             // 
             // Task2Button
             // 
-            this.Task2Button.Location = new System.Drawing.Point(285, 17);
+            this.Task2Button.Location = new System.Drawing.Point(277, 13);
             this.Task2Button.Margin = new System.Windows.Forms.Padding(4);
             this.Task2Button.Name = "Task2Button";
             this.Task2Button.Size = new System.Drawing.Size(236, 115);
@@ -57,9 +57,9 @@ namespace LAB_2
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 161);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(178F, 178F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(526, 134);
             this.Controls.Add(this.Task2Button);
             this.Controls.Add(this.Task1Button);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);

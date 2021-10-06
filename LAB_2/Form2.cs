@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LAB_2
@@ -17,15 +10,15 @@ namespace LAB_2
             InitializeComponent();
         }
 
-        private void Task1Button_Click(object sender, EventArgs e)
+        private void Task1Button_Click(object sender, EventArgs e)//если нажали первую кнопку
         {
-            Task1 task1 = new Task1();
+            Task1 task1 = new Task1();//открываем окно задачи на for
             task1.Show();
         }
 
-        private void Task2Button_Click(object sender, EventArgs e)
+        private void Task2Button_Click(object sender, EventArgs e)//если нажали вторую кнопку
         {
-            Task2 task2 = new Task2();
+            Task2 task2 = new Task2();//открываем окно задачи на строки
             task2.Show();
         }
     }
