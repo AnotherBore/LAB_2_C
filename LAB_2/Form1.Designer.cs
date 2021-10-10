@@ -34,35 +34,35 @@ namespace LAB_2
             this.MainButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.TaskButton = new System.Windows.Forms.Button();
+            this.TaskButton = new System.Windows.Forms.Button();          
             this.SuspendLayout();
             // 
             // textA
             // 
-            this.textA.Location = new System.Drawing.Point(17, 18);
-            this.textA.Margin = new System.Windows.Forms.Padding(4);
+            this.textA.Location = new System.Drawing.Point(10, 10);
+            this.textA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textA.Name = "textA";
-            this.textA.Size = new System.Drawing.Size(127, 47);
+            this.textA.Size = new System.Drawing.Size(74, 29);
             this.textA.TabIndex = 0;
-            this.textA.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Just_Key_Up);
             this.textA.Text = Properties.Settings.Default.sideA;
+            this.textA.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Just_Key_Up);
             // 
             // textB
             // 
-            this.textB.Location = new System.Drawing.Point(17, 58);
-            this.textB.Margin = new System.Windows.Forms.Padding(4);
+            this.textB.Location = new System.Drawing.Point(10, 44);
+            this.textB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textB.Name = "textB";
-            this.textB.Size = new System.Drawing.Size(127, 47);
+            this.textB.Size = new System.Drawing.Size(74, 29);
             this.textB.TabIndex = 1;
-            this.textB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Just_Key_Up);
             this.textB.Text = Properties.Settings.Default.sideB;
+            this.textB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Just_Key_Up);
             // 
             // MainButton
             // 
-            this.MainButton.Location = new System.Drawing.Point(17, 105);
-            this.MainButton.Margin = new System.Windows.Forms.Padding(4);
+            this.MainButton.Location = new System.Drawing.Point(10, 77);
+            this.MainButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MainButton.Name = "MainButton";
-            this.MainButton.Size = new System.Drawing.Size(384, 43);
+            this.MainButton.Size = new System.Drawing.Size(327, 40);
             this.MainButton.TabIndex = 2;
             this.MainButton.Text = "Режем на квадраты";
             this.MainButton.UseVisualStyleBackColor = true;
@@ -71,29 +71,29 @@ namespace LAB_2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(154, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(88, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(475, 41);
+            this.label1.Size = new System.Drawing.Size(247, 21);
             this.label1.TabIndex = 3;
             this.label1.Text = "Первая сторона прямоугольника";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(156, 58);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(91, 45);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(469, 41);
+            this.label2.Size = new System.Drawing.Size(245, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Вторая сторона прямоугольника";
             // 
             // TaskButton
             // 
-            this.TaskButton.Location = new System.Drawing.Point(409, 18);
-            this.TaskButton.Margin = new System.Windows.Forms.Padding(4);
+            this.TaskButton.Location = new System.Drawing.Point(350, 9);
+            this.TaskButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TaskButton.Name = "TaskButton";
-            this.TaskButton.Size = new System.Drawing.Size(112, 130);
+            this.TaskButton.Size = new System.Drawing.Size(107, 108);
             this.TaskButton.TabIndex = 5;
             this.TaskButton.Text = "Задание";
             this.TaskButton.UseVisualStyleBackColor = true;
@@ -101,8 +101,10 @@ namespace LAB_2
             // 
             // Task1
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(526, 134);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(464, 126);
             this.Controls.Add(this.TaskButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -110,12 +112,12 @@ namespace LAB_2
             this.Controls.Add(this.textB);
             this.Controls.Add(this.textA);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(550, 200);
-            this.MinimumSize = new System.Drawing.Size(550, 200);
             this.Name = "Task1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Квадраторезка";
             this.ResumeLayout(false);
             this.PerformLayout();

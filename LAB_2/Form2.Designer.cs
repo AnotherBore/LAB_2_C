@@ -35,10 +35,10 @@ namespace LAB_2
             // 
             // Task1Button
             // 
-            this.Task1Button.Location = new System.Drawing.Point(13, 13);
-            this.Task1Button.Margin = new System.Windows.Forms.Padding(4);
+            this.Task1Button.Location = new System.Drawing.Point(7, 7);
+            this.Task1Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Task1Button.Name = "Task1Button";
-            this.Task1Button.Size = new System.Drawing.Size(236, 115);
+            this.Task1Button.Size = new System.Drawing.Size(127, 69);
             this.Task1Button.TabIndex = 0;
             this.Task1Button.Text = "Задача на for";
             this.Task1Button.UseVisualStyleBackColor = true;
@@ -46,10 +46,10 @@ namespace LAB_2
             // 
             // Task2Button
             // 
-            this.Task2Button.Location = new System.Drawing.Point(277, 13);
-            this.Task2Button.Margin = new System.Windows.Forms.Padding(4);
+            this.Task2Button.Location = new System.Drawing.Point(150, 7);
+            this.Task2Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Task2Button.Name = "Task2Button";
-            this.Task2Button.Size = new System.Drawing.Size(236, 115);
+            this.Task2Button.Size = new System.Drawing.Size(127, 69);
             this.Task2Button.TabIndex = 1;
             this.Task2Button.Text = "Задача на строки";
             this.Task2Button.UseVisualStyleBackColor = true;
@@ -57,17 +57,18 @@ namespace LAB_2
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(178F, 178F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(526, 134);
+            this.ClientSize = new System.Drawing.Size(288, 87);
             this.Controls.Add(this.Task2Button);
             this.Controls.Add(this.Task1Button);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(550, 200);
-            this.MinimumSize = new System.Drawing.Size(550, 200);
+            this.MinimumSize = new System.Drawing.Size(304, 126);
             this.Name = "MainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Основное меню";
             this.ResumeLayout(false);
 

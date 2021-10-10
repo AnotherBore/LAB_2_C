@@ -8,6 +8,7 @@ namespace LAB_2
         public Task2()
         {
             InitializeComponent();
+            textInput.Text = Properties.Settings.Default.input;
         }
 
         private void TaskButton2_Click(object sender, EventArgs e)//выводим задание по нажатию кнопки
@@ -46,6 +47,11 @@ MessageBoxIcon.Question);
                 dol = Convert.ToUInt16(q * 100 / str.Length);//считаем проценты
                 return dol;//возвращаем проценты
             }
+        }
+
+        private void TaskLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
