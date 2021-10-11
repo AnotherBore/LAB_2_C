@@ -37,7 +37,7 @@ MessageBoxIcon.Question);
             }
             catch (OverflowException)
             {
-                MessageBox.Show("Слишком большое число", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Число за пределами ОДЗ", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             //проверяем стороны на корректность
