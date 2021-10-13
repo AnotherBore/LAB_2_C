@@ -49,9 +49,9 @@ MessageBoxIcon.Question);
             }
         }
 
-        private void TaskLabel_Click(object sender, EventArgs e)
+        private void ClearButton1_Click(object sender, EventArgs e)
         {
-
+            this.textInput.Text = "";
         }
     }
 }

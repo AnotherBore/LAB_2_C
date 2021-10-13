@@ -34,35 +34,34 @@ namespace LAB_2
             this.MainButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.TaskButton = new System.Windows.Forms.Button();          
+            this.TaskButton = new System.Windows.Forms.Button();
+            this.ClearButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textA
             // 
             this.textA.Location = new System.Drawing.Point(10, 10);
-            this.textA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textA.Margin = new System.Windows.Forms.Padding(2);
             this.textA.Name = "textA";
             this.textA.Size = new System.Drawing.Size(74, 29);
             this.textA.TabIndex = 0;
-            this.textA.Text = Properties.Settings.Default.sideA;
             this.textA.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Just_Key_Up);
             // 
             // textB
             // 
             this.textB.Location = new System.Drawing.Point(10, 44);
-            this.textB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textB.Margin = new System.Windows.Forms.Padding(2);
             this.textB.Name = "textB";
             this.textB.Size = new System.Drawing.Size(74, 29);
             this.textB.TabIndex = 1;
-            this.textB.Text = Properties.Settings.Default.sideB;
             this.textB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Just_Key_Up);
             // 
             // MainButton
             // 
             this.MainButton.Location = new System.Drawing.Point(10, 77);
-            this.MainButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MainButton.Margin = new System.Windows.Forms.Padding(2);
             this.MainButton.Name = "MainButton";
-            this.MainButton.Size = new System.Drawing.Size(327, 40);
+            this.MainButton.Size = new System.Drawing.Size(169, 40);
             this.MainButton.TabIndex = 2;
             this.MainButton.Text = "Режем на квадраты";
             this.MainButton.UseVisualStyleBackColor = true;
@@ -91,7 +90,7 @@ namespace LAB_2
             // TaskButton
             // 
             this.TaskButton.Location = new System.Drawing.Point(350, 9);
-            this.TaskButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TaskButton.Margin = new System.Windows.Forms.Padding(2);
             this.TaskButton.Name = "TaskButton";
             this.TaskButton.Size = new System.Drawing.Size(107, 108);
             this.TaskButton.TabIndex = 5;
@@ -99,12 +98,23 @@ namespace LAB_2
             this.TaskButton.UseVisualStyleBackColor = true;
             this.TaskButton.Click += new System.EventHandler(this.TaskButton_Click);
             // 
+            // ClearButton
+            // 
+            this.ClearButton.Location = new System.Drawing.Point(185, 77);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(151, 40);
+            this.ClearButton.TabIndex = 6;
+            this.ClearButton.Text = "Очистить поля";
+            this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
             // Task1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(464, 126);
+            this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.TaskButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -114,7 +124,7 @@ namespace LAB_2
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Task1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -132,6 +142,7 @@ namespace LAB_2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button TaskButton;
+        private System.Windows.Forms.Button ClearButton;
     }
 }
 

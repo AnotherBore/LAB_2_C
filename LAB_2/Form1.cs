@@ -71,6 +71,12 @@ MessageBoxIcon.Question);
                 SelectNextControl(ActiveControl, true, true, true, true);
             }
         }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            this.textA.Text = "";
+            this.textB.Text = "";
+        }
     }
     public class LogicTask1
     {
